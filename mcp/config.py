@@ -20,7 +20,7 @@ class SmritiMCPConfig:
     api_key: str = field(default="")
 
     # ── API Connection ────────────────────────────────────────────────────────
-    base_url: str = field(default="https://smriti-kaal.vercel.app")
+    base_url: str = field(default="https://spy9191-chronos-api-backend.hf.space")
 
     # ── Defaults ──────────────────────────────────────────────────────────────
     source_id: str = field(default="mcp-client")
@@ -42,7 +42,7 @@ class SmritiMCPConfig:
         if not self.api_key:
             print(
                 "ERROR: SMRITI_API_KEY environment variable is required.\n"
-                "Get your free API key at: https://smriti-kaal.vercel.app\n"
+                "Get your free API key at: https://spy9191-chronos-api-backend.hf.space\n"
                 "Then set it: export SMRITI_API_KEY=chrn_your_key_here",
                 file=sys.stderr,
             )
@@ -55,7 +55,7 @@ def load_config() -> SmritiMCPConfig:
         api_key=os.getenv("SMRITI_API_KEY", ""),
         base_url=os.getenv(
             "SMRITI_BASE_URL",
-            "https://smriti-kaal.vercel.app",
+            "https://spy9191-chronos-api-backend.hf.space",
         ),
         source_id=os.getenv("SMRITI_SOURCE_ID", "mcp-client"),
         scope=os.getenv("SMRITI_SCOPE", "default"),

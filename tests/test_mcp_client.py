@@ -54,7 +54,7 @@ class TestConfig:
         monkeypatch.delenv("SMRITI_BASE_URL", raising=False)
         config = load_config()
         assert config.api_key == ""
-        assert "smriti-kaal.vercel.app" in config.base_url
+        assert "spy9191-chronos-api-backend.hf.space" in config.base_url
         assert config.source_id == "mcp-client"
 
     def test_load_from_env(self, monkeypatch):

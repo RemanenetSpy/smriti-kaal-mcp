@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smriti-kaal-mcp"
+version = "0.1.0"
+description = "Model Context Protocol server for Smriti — Temporal AI Memory for Claude, Cursor, VS Code, and Windsurf"
+readme = "mcp/README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [
+  { name = "Smriti", email = "remanenetspy@gmail.com" }
+]
+keywords = [
+  "mcp",
+  "model-context-protocol",
+  "ai-memory",
+  "temporal-memory",
+  "claude",
+  "cursor",
+  "llm",
+  "svo",
+  "knowledge-graph"
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Developers",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = [
+  "mcp[cli]>=1.0.0",
+  "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dotenv = ["python-dotenv>=1.0.0"]
+
+[project.urls]
+Homepage = "https://smriti-kaal.vercel.app"
+Documentation = "https://smriti-kaal.vercel.app/docs"
+Repository = "https://github.com/RemanenetSpy/smriti-kaal-mcp"
+"Bug Tracker" = "https://github.com/RemanenetSpy/smriti-kaal-mcp/issues"
+
+[project.scripts]
+smriti-kaal-mcp = "smriti_mcp.__main__:main"
+smriti-mcp = "smriti_mcp.__main__:main"
+
+# ── Package mapping ────────────────────────────────────────────────────────────
+# Maps the mcp/ directory → installed as smriti_mcp
+# No files renamed, no imports changed, relative imports still work.
+[tool.setuptools]
+packages = ["smriti_mcp"]
+
+[tool.setuptools.package-dir]
+smriti_mcp = "mcp"
+
+[tool.setuptools.package-data]
+smriti_mcp = ["*.md", "*.json"]

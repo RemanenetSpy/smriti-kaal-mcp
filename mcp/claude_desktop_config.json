@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "smriti": {
+      "command": "uvx",
+      "args": ["smriti-kaal-mcp"],
+      "env": {
+        "SMRITI_API_KEY": "chrn_your_api_key_here",
+        "SMRITI_SOURCE_ID": "my-project",
+        "SMRITI_SCOPE": "default"
+      }
+    }
+  }
+}

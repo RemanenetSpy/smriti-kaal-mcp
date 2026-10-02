@@ -1,0 +1,35 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data and Databases (CRITICAL: Do not commit memory stores)
+data/
+*.sqlite3
+*.db
+chroma/
+
+# IDEs
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Audio reference files (managed separately)
+assets/amber_voice.wav
+
+# Packaging and distribution
+dist/
+build/
+*.egg-info/
